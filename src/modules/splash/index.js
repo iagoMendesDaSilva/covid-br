@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Image, Animated } from 'react-native';
+import { SafeAreaView, StyleSheet, Image, Animated } from 'react-native';
 
 export const Splash = ({ navigation }) => {
 
@@ -12,11 +12,11 @@ export const Splash = ({ navigation }) => {
     }).start(() => navigation.replace("States")), [])
 
     return (
-        <View style={styles.containerAll}>
+        <SafeAreaView style={styles.containerAll}>
             <Animated.View style={{ ...styles.containerImage, opacity: fade }}>
                 <Image resizeMode={"contain"} source={require("../../assets/images/logo.png")} style={styles.img} />
             </Animated.View>
-        </View>
+        </SafeAreaView>
     )
 }
 

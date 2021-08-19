@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, FlatList, ActivityIndicator, Text, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, FlatList, ActivityIndicator, Text, TouchableOpacity, SafeAreaView } from 'react-native';
 
 import { uf } from '../../assets/values/uf'
 import { Icon, HeaderList } from '../../helpers';
@@ -84,7 +84,7 @@ export const States = ({ navigation }) => {
         </View>
 
     return (
-        <View style={styles.containerAll}>
+        <SafeAreaView style={styles.containerAll}>
             {
                 loading ?
                     <View style={styles.containerLoad}>
@@ -106,7 +106,7 @@ export const States = ({ navigation }) => {
                         />
                     </>
             }
-        </View>
+        </SafeAreaView>
     )
 }
 

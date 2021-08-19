@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, FlatList, ActivityIndicator, Text } from 'react-native';
+import { View, StyleSheet, FlatList, ActivityIndicator, Text, SafeAreaView } from 'react-native';
 
 import { Icon, HeaderList } from '../../helpers';
 
@@ -73,7 +73,7 @@ export const Cities = ({ route }) => {
         </View>
 
     return (
-        <View style={styles.containerAll}>
+        <SafeAreaView style={styles.containerAll}>
             {
                 loading ?
                     <View style={styles.containerLoad}>
@@ -95,7 +95,7 @@ export const Cities = ({ route }) => {
                         />
                     </>
             }
-        </View>
+        </SafeAreaView>
     )
 }
 
